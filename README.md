@@ -73,10 +73,6 @@ smle create yaml
 
 ## Contributing
 
-**Join us on discord!**
-
-[![Discord](https://img.shields.io/discord/YOUR_SERVER_ID?label=Discord&logo=discord&logoColor=white)](https://discord.gg/WxDkvktBAa)
-
 Contributions are welcome! If you have ideas for improvements, feel free to fork the repository and submit a pull request.
 
 1. Fork the Project
