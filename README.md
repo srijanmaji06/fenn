@@ -2,7 +2,7 @@
 
 ![GitHub stars](https://img.shields.io/github/stars/blkdmr/pysmle?style=social) ![GitHub forks](https://img.shields.io/github/forks/blkdmr/pysmle?style=social) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/261c40f69583462baa200aee959bcc8f)](https://app.codacy.com/gh/blkdmr/pysmle/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 
-![PyPI version](https://img.shields.io/pypi/v/smle) ![License](https://img.shields.io/github/license/blkdmr/pysmle) [![PyPI Downloads](https://img.shields.io/pypi/dm/pysmle.svg?label=downloads&logo=pypi&color=blue)](https://pypi.org/project/smle/)
+![PyPI version](https://img.shields.io/pypi/v/smle) ![License](https://img.shields.io/github/license/blkdmr/pysmle) [![PyPI Downloads](https://img.shields.io/pypi/dm/smle.svg?label=downloads&logo=pypi&color=blue)](https://pypi.org/project/smle/)
 
 [![Discord](https://dcbadge.limes.pink/api/server/WxDkvktBAa)](https://discord.gg/WxDkvktBAa)
 
