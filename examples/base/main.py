@@ -11,6 +11,7 @@ def main(args):
 
     # 'args' contains your fenn.yaml configurations
     message = f"Training with learning rate: {args['training']['lr']}"
+
     notifier.notify(message)
     print(message)
 

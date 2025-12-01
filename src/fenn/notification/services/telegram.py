@@ -23,6 +23,7 @@ class Telegram(Service):
         self._parse_mode = parse_mode
         self._telegram_api_url = f"https://api.telegram.org/bot{self._keystore.get_key('TELEGRAM_BOT_TOKEN')}/sendMessage"
         self._chat_id = self._keystore.get_key("TELEGRAM_CHAT_ID")
+
     def send_notification(self, message: str) -> None:
         """Send notification to Telegram chat.
 
