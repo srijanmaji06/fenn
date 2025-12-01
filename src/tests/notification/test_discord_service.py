@@ -1,5 +1,5 @@
 import pytest
-from smle.notification.discord_service import Discord
+from fenn.notification.discord_service import Discord
 
 @pytest.fixture(scope="class")
 def message(fake):
@@ -38,7 +38,7 @@ class TestDiscord:
             "https://discord.com/api/webhooks/123/abc", message, 204, {}
         ).last_request
 
-        assert request.json() == {"content": message, "username": "pysmle"}
+        assert request.json() == {"content": message, "username": "fenn"}
 
     def test_send_notification_error(self, capsys, send_message_to_discord, message):
         send_message_to_discord(

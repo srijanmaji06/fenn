@@ -1,10 +1,10 @@
 # Contribution Guide
 
-Welcome to the **pySMLE** project! This guide explains how to prepare your changes, work with Git, and open good pull requests.
+Welcome to the **fenn** project! This guide explains how to prepare your changes, work with Git, and open good pull requests.
 
 ## Initial Checks
 
-Before you start coding, read the main `README.md` and the [documentation](https://pysmle.org/) to understand the project goals, basic usage, and current roadmap. If you are unsure what to work on or want feedback on an idea, start a conversation on the project’s Discord server or in the GitHub discussion thread linked from the README so the maintainers can help you scope a useful contribution.
+Before you start coding, read the main `README.md` and the [documentation](https://fennpy.org/) to understand the project goals, basic usage, and current roadmap. If you are unsure what to work on or want feedback on an idea, start a conversation on the project’s Discord server or in the GitHub discussion thread linked from the README so the maintainers can help you scope a useful contribution.
 
 Whenever possible, prefer small, focused changes over very large pull requests.
 If you plan a bigger feature or refactor, discuss it first to confirm that it fits the project direction.
@@ -15,7 +15,7 @@ If you are new to Git and GitHub, the steps below describe a simple way to contr
 
 - Fork the repository to your own GitHub account.
 - Clone your fork locally:
-  `git clone https://github.com/<your-username>/pysmle.git`
+  `git clone https://github.com/<your-username>/fenn.git`
 - Create a new branch for your work:
   `git checkout -b feature`
 - Make and test your changes.
@@ -25,7 +25,7 @@ If you are new to Git and GitHub, the steps below describe a simple way to contr
   `git commit -m "Describe your change"`
 - Push your branch:
   `git push origin feature`
-- Open a pull request from your branch into the main `pySMLE` repository.
+- Open a pull request from your branch into the main `fenn` repository.
 
 Try to keep each branch focused on a single issue or feature so that reviews are easier.
 
@@ -37,13 +37,13 @@ When you make changes, aim to:
 - Add or update tests and documentation if your change affects behavior or public APIs.
 - Keep commits logically grouped (for example, separate “refactor” from “new feature” where it makes sense).
 
-**Please note** that, in order to test your changes, you need to reinstall `pySMLE` locally in editable mode by running:
+**Please note** that, in order to test your changes, you need to reinstall `fenn` locally in editable mode by running:
 
 ```
-pip install -e . 
+pip install -e .
 ```
 
-from the base project directory (the one containing the project `pyproject.toml` file). 
+from the base project directory (the one containing the project `pyproject.toml` file).
 
 Once your branch is ready:
 
@@ -64,7 +64,7 @@ If you find a bug or have a feature request but do not plan to implement it your
 
 - Open a GitHub issue with a clear description of the problem or idea.
 - For bugs, describe the expected behavior, the actual behavior, and how to reproduce it (include versions and environment details when possible).
-- For feature requests, explain the use case and how it would benefit pySMLE users.
+- For feature requests, explain the use case and how it would benefit fenn users.
 
 If you need guidance at any point, use the Discord server or the GitHub discussion thread to ask questions and coordinate with maintainers and other contributors.
 

@@ -1,6 +1,6 @@
-from smle.utils import set_seed
-from smle.trainer import Trainer
-from smle import entrypoint
+from fenn.utils import set_seed
+from fenn.trainer import Trainer
+from fenn import entrypoint
 
 import pandas as pd
 import numpy as np

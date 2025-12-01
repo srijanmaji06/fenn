@@ -1,14 +1,14 @@
 import argparse
-import smle.cli.init_command as init_command
-import smle.cli.create_command as create_command
+import fenn.cli.init_command as init_command
+import fenn.cli.create_command as create_command
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(prog="smle")
+    parser = argparse.ArgumentParser(prog="fenn")
     subparsers = parser.add_subparsers(dest="command", required=True)
 
     # --- Level 1 ---
-    p_init = subparsers.add_parser("init", help="Initialize a smle project")
-    p_create = subparsers.add_parser("create", help="Create a file for a smle project")
+    p_init = subparsers.add_parser("init", help="Initialize a fenn project")
+    p_create = subparsers.add_parser("create", help="Create a file for a fenn project")
 
     #create_subparsers = p_init.add_subparsers(dest="file", required=True, help="Project file")
 

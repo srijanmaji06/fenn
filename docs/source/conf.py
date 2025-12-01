@@ -2,7 +2,7 @@
 
 # -- Project information
 
-project = 'SMLE'
+project = 'fenn'
 copyright = '2025, blkdmr'
 author = 'Alessio Russo (blkdmr)'
 

@@ -1,5 +1,5 @@
 import requests
-from smle.notification.service import Service
+from fenn.notification.service import Service
 
 
 class Discord(Service):
@@ -23,7 +23,7 @@ class Discord(Service):
         """
         data = {
             "content": message,
-            "username": "pysmle"
+            "username": "fenn"
         }
 
         try:

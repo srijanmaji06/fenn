@@ -3,9 +3,9 @@ requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "fenly"
+name = "fenn"
 version = "0.0.2"
-description = "Simplify Machine Learning Environments (SMLE) - A simple framework that takes care of the boring stuff in ML projects."
+description = "Friendly Environment for Neural Networks – a simple framework that automates the boring side of ML."
 
 authors = [
   { name="Alessio Russo", email="alessio.russo.ar98@gmail.com" },
@@ -57,10 +57,10 @@ test = [
 where = ["src"]
 
 [project.scripts]
-smle = "smle.cli:main"
+fenn = "fenn.cli:main"
 
 [project.urls]
-"Homepage" = "https://pysmle.org"
-"Documentation" = "https://pysmle.org"
-"Source Code" = "https://github.com/blkdmr/smle"
-"Bug Tracker" = "https://github.com/blkdmr/smle/issues"
+"Homepage" = "https://fennpy.org"
+"Documentation" = "https://fennpy.org"
+"Source Code" = "https://github.com/blkdmr/fennpy"
+"Bug Tracker" = "https://github.com/blkdmr/fennpy/issues"

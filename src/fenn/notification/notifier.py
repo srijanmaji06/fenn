@@ -1,5 +1,5 @@
 from typing import List
-from smle.notification.service import Service
+from fenn.notification.service import Service
 
 class Notifier:
     """Central notification manager that handles multiple notification services."""

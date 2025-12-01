@@ -11,7 +11,7 @@ class Notifier:
 
         data = {
             "content": message,
-            "username": "pysmle"
+            "username": "fenn"
         }
 
         result = requests.post(self._discord_webhook_url, json=data)

@@ -1,5 +1,5 @@
 import requests
-from smle.notification.service import Service
+from fenn.notification.service import Service
 from typing import Literal
 
 class Telegram(Service):

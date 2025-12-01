@@ -2,7 +2,7 @@ import yaml
 import os
 from colorama import Fore, Style, init
 from typing import Any, Dict
-from smle.secrets.keystore import KeyStore
+from fenn.secrets.keystore import KeyStore
 
 class Parser:
 
@@ -15,7 +15,7 @@ class Parser:
 
     def __init__(self) -> None:
 
-        self._config_file: str = "smle.yaml"
+        self._config_file: str = "fenn.yaml"
         self._args: Dict[str, Any] = {}
 
         self._keystore: KeyStore = KeyStore()
@@ -29,7 +29,7 @@ class Parser:
         with open(self._config_file) as f:
             self._args = yaml.safe_load(f)
 
-        default = "(default)" if self._config_file == "smle.yaml" else ""
+        default = "(default)" if self._config_file == "fenn.yaml" else ""
         if not os.path.isfile(self._config_file):
             print(f"{Fore.RED}[SMLE] Configuration file {Fore.LIGHTYELLOW_EX}{self._config_file} {default}{Fore.RED} was not found.")
             print(f"{Fore.RED}[SMLE] Please use {Fore.LIGHTYELLOW_EX}smle create yaml{Fore.RED} to create it.{Style.RESET_ALL}")

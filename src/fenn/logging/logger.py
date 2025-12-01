@@ -8,8 +8,8 @@ from colorama import Fore, Style
 
 from typing import Any, Dict, Optional
 
-from smle.args import Parser
-from smle.secrets.keystore import KeyStore
+from fenn.args import Parser
+from fenn.secrets.keystore import KeyStore
 
 class Logger:
 

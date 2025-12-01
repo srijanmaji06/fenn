@@ -4,7 +4,7 @@ from importlib.resources import files
 from colorama import Fore, Style
 import sys
 import os
-from smle.cli.utils import copy_template
+from fenn.cli.utils import copy_template
 
 def execute(args: argparse.Namespace) -> None:
 
@@ -18,8 +18,8 @@ def execute(args: argparse.Namespace) -> None:
     destination: Path | None = None
 
     if args.filetype == "yaml":
-        source = templates_path/"smle.yaml"
-        destination = root_dir / "smle.yaml"
+        source = templates_path/"fenn.yaml"
+        destination = root_dir / "fenn.yaml"
     elif args.filetype == "env":
         source = templates_path/"dotenv"
         destination = root_dir / ".env"

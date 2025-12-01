@@ -1,17 +1,17 @@
 from colorama import Fore, Style
 from typing import Callable, Optional, Any, Type, Iterable
 
-from smle.args import Parser
-from smle.logging import Logger
-from smle.notification import Notifier, Service
-from smle.secrets.keystore import KeyStore
+from fenn.args import Parser
+from fenn.logging import Logger
+from fenn.notification import Notifier, Service
+from fenn.secrets.keystore import KeyStore
 
-from smle.utils import generate_haiku_id
+from fenn.utils import generate_haiku_id
 
-class SMLE:
+class FENN:
 
     """
-    The base SMLE application
+    The base FENN application
     """
 
     def __init__(self) -> None:
@@ -41,7 +41,7 @@ class SMLE:
         if not self._entrypoint_fn:
             raise RuntimeError(f"{Fore.RED}[SMLE] No main function registered. {Fore.RED}[SMLE] Please use {Fore.LIGHTYELLOW_EX}@app.entrypoint{Fore.RED} to register your main function{Style.RESET_ALL}")
 
-        self._parser.config_file = self._config_file if self._config_file != None else "smle.yaml"
+        self._parser.config_file = self._config_file if self._config_file != None else "fenn.yaml"
         self._args = self._parser.load_configuration()
         self._args["session_id"] = self._session_id
 

@@ -1,10 +1,10 @@
-from smle import SMLE
+from fenn import FENN
 
-app = SMLE()
+app = FENN()
 
 @app.entrypoint
 def main(args):
-    # 'args' contains your smle.yaml configurations
+    # 'args' contains your fenn.yaml configurations
     print(f"Training with learning rate: {args['training']['lr']}")
 
     # Your logic here...

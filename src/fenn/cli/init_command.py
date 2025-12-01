@@ -1,6 +1,6 @@
 import argparse
 from pathlib import Path
-from smle.cli.utils import copy_template
+from fenn.cli.utils import copy_template
 from importlib.resources import files
 from colorama import Fore, Style
 import sys
@@ -36,6 +36,6 @@ def execute(args: argparse.Namespace) -> None:
     copy_template(template_base_script, root_dir / "main.py")
     copy_template(templates_path/"dotenv", root_dir / ".env")
     copy_template(templates_path/"dotgitignore", root_dir / ".gitignore")
-    copy_template(templates_path/"smle.yaml", root_dir / "smle.yaml")
+    copy_template(templates_path/"fenn.yaml", root_dir / "fenn.yaml")
 
     print(f"{Fore.GREEN}[SMLE] Initialized {Fore.LIGHTYELLOW_EX}{args.template}{Fore.GREEN} template in {Fore.LIGHTYELLOW_EX}{root_dir}{Fore.GREEN} directory.{Style.RESET_ALL}")

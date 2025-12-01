@@ -31,9 +31,9 @@ except ImportError as e:
 from sklearn.metrics import accuracy_score
 from pathlib import Path
 
-from smle import entrypoint
-from smle.utils import set_seed
-from smle.trainer import Trainer
+from fenn import entrypoint
+from fenn.utils import set_seed
+from fenn.trainer import Trainer
 
 @entrypoint
 def main(args):
