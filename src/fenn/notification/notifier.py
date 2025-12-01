@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Type, Iterable
 from fenn.notification.service import Service
 
 class Notifier:
@@ -8,15 +8,29 @@ class Notifier:
         """Initialize the notifier with an empty list of services."""
         self._services: List[Service] = []
 
-    def add_service(self, service: Service) -> None:
+    def add_services(
+        self,
+        services: Iterable[Type[Service]],
+    ) -> None:
+        """
+        Add a list of notification services.
+
+        Example:
+            app.register_notification_services([Discord, Telegram])
+        """
+
+        for service_cls in services:
+            self._services.add_service(service_cls())
+
+    def add_service(self, service: Type[Service]) -> None:
         """Add a notification service.
 
         Args:
             service: A service implementing the Service interface.
         """
-        self._services.append(service)
+        self._services.append(service())
 
-    def remove_service(self, service: Service) -> None:
+    def remove_service(self, service: Type[Service]) -> None:
         """Remove a notification service.
 
         Args:
@@ -26,7 +40,7 @@ class Notifier:
             ValueError: If the service is not found.
         """
         try:
-            self._services.remove(service)
+            self._services.remove(service())
         except ValueError:
             ValueError(f"Service {service.__class__.__name__} not found in services list")
             raise

@@ -1,9 +1,8 @@
 from colorama import Fore, Style
-from typing import Callable, Optional, Any, Type, Iterable
+from typing import Callable, Optional, Any
 
 from fenn.args import Parser
 from fenn.logging import Logger
-from fenn.notification import Notifier, Service
 from fenn.secrets.keystore import KeyStore
 
 from fenn.utils import generate_haiku_id
@@ -21,7 +20,6 @@ class FENN:
         self._parser: Parser = Parser()
         self._keystore: KeyStore = KeyStore()
         self._logger: Logger = Logger()
-        self._notifier: Notifier = Notifier()
         self._config_file: str = None
 
         self._entrypoint_fn: Optional[Callable] = None
@@ -58,23 +56,6 @@ class FENN:
             return result
         finally:
             self._logger.stop()
-
-    def register_notification_services(
-        self,
-        services: Iterable[Type[Service]],
-    ) -> None:
-        """
-        Register notification service classes.
-
-        Example:
-            app.register_notification_services([Discord, Telegram])
-        """
-
-        for service_cls in services:
-            self._notifier.add_service(service_cls())
-
-    def notify(self, message:str):
-        self._notifier.notify(message)
 
     @property
     def config_file(self) -> str:
