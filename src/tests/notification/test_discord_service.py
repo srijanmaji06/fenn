@@ -41,15 +41,10 @@ class TestDiscord:
 
         assert request.json() == {"content": message, "username": "fenn"}
 
-    def test_send_notification_error(self, monkeypatch, requests_mock, message):
-        monkeypatch.setenv("DISCORD_WEBHOOK_URL", "https://discord.com/api/webhooks/123/abc")
-        requests_mock.post(
-            "https://discord.com/api/webhooks/123/abc",
-            status_code=400,
-            json={"error": "test"}
-        )
-
+    def test_send_notification_error(self, send_message_to_discord, message):
         with pytest.raises(requests.exceptions.RequestException) as exc_info:
-            Discord().send_notification(message)
+            send_message_to_discord(
+                "https://discord.com/api/webhooks/123/abc", message, 400, {"error": "test"}
+            )
         
         assert "400" in str(exc_info.value)
