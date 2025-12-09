@@ -2,6 +2,7 @@ site_name: FENN
 site_url: https://pyfenn.org/
 site_description: FENN Friendly Environment for Neural Networks
 site_author: PyFenn
+docs_dir: src
 
 theme:
   name: material
